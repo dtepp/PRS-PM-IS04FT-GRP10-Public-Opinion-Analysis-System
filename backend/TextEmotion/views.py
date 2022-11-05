@@ -166,11 +166,7 @@ try:
    # django_job_store.remove_all_jobs()
 
 
-    @register_job(scheduler, 'cron', id='sixjob', hour=6, minute=0)
-    def sixAm():
 
-        print('job1')
-        tweetsRunningJob()
 
 
     @register_job(scheduler, 'cron', id='eightjob', hour=8, minute=0)
@@ -180,11 +176,6 @@ try:
         tweetsRunningJob()
 
 
-    @register_job(scheduler, 'cron', id='test3', hour=10, minute=0)
-    def tenAm():
-
-        print('job3')
-        tweetsRunningJob()
 
 
     @register_job(scheduler, 'cron', id='test4', hour=12, minute=0)
@@ -194,12 +185,7 @@ try:
         tweetsRunningJob()
 
 
-    @register_job(scheduler, 'cron', id='test5', hour=14, minute=0)
-    def twopm():
-
-        print('job5')
-
-        tweetsRunningJob()
+  
 
 
     @register_job(scheduler, 'cron', id='test6', hour=16, minute=0)
@@ -209,11 +195,7 @@ try:
         tweetsRunningJob()
 
 
-    @register_job(scheduler, 'cron', id='test7', hour=18, minute=0)
-    def sixpm():
 
-        print('job7')
-        tweetsRunningJob()
 
 
     @register_job(scheduler, 'cron', id='test8', hour=20, minute=0)
@@ -223,13 +205,9 @@ try:
         tweetsRunningJob()
 
 
-    @register_job(scheduler, 'cron', id='test9', hour=22, minute=0)
-    def tenpm():
+ 
 
-        print('job9')
-        tweetsRunningJob()
-
-    @register_job(scheduler, 'cron', id='test10', hour=2, minute=0)
+    @register_job(scheduler, 'cron', id='test10', hour=1, minute=0)
     def tenpm():
 
         print('job10')
