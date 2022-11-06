@@ -204,14 +204,14 @@ def get_stream(set, number, account):
                 nowTime = time.perf_counter()
                 # print(nowTime-startTime)
                 # print(len(dataSet))
-                if nowTime - startTime > 180:
+                if nowTime - startTime > 100:
                     response.close()
                     dataSet = sorted(dataSet, key=lambda t: t[1], reverse=True)
                     return dataSet
             # print(len(dataSet))
             if number == 999:
                 nowTime = time.perf_counter()
-                if nowTime - startTime > 300:
+                if nowTime - startTime > 100:
                     response.close()
                     dataSet = sorted(dataSet, key=lambda t: t[1], reverse=True)
                     return dataSet

@@ -17,12 +17,12 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from TextEmotion.views import TweetViewSet,TopicViewSet,addTopic,tweetsSearch,getText,getTopic
-
+from django.views.generic.base import TemplateView
 
 router = routers.DefaultRouter()
 router.register(r'Tweets', TweetViewSet)
 router.register(r'Topics', TopicViewSet)
-
+ 
 
 
 
@@ -32,5 +32,6 @@ urlpatterns = [
     path('topic/fetch/', addTopic),
     path('tweet/search/<name>', tweetsSearch),
     path('tweets/<id>', getText),
-    path('getTopic/',getTopic)
+    path('getTopic/',getTopic),
+    path(r'', TemplateView.as_view(template_name='index.html')),
 ]
