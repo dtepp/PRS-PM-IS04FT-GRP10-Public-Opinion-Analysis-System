@@ -33,5 +33,5 @@ urlpatterns = [
     path('tweet/search/<name>', tweetsSearch),
     path('tweets/<id>', getText),
     path('getTopic/',getTopic),
-    path(r'', TemplateView.as_view(template_name='index.html')),
+
 ]
